@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-asciiCode = 0
-while asciiCode < 26:
-    if asciiCode != 4 and asciiCode != 16:
-        print("{}".format(chr(97 + asciiCode)), end="")
-    asciiCode += 1
+for char in range(26):
+    if char != 4 and char != 16:
+        print("{:s}".format(chr(char + ord("a"))), end="")
