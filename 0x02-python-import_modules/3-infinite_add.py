@@ -3,7 +3,7 @@ def main():
     import sys
     res = 0
     for arg in sys.argv:
-        if arg != "./3-infinite_add.py":
+        if arg != sys.argv[0]:
             res += int(arg)
         print(res)
 
