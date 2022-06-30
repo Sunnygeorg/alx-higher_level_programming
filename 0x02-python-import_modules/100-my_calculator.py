@@ -17,7 +17,7 @@ def main():
         elif sys.argv[2] == '*':
             print(f"{a} {sys.argv[2]} {b} = {calc.mul(a, b)}") 
         else:
-            print("Uknown operator. Available operators: +, -, * and /")
+            print("Unknown operator. Available operators: +, -, * and /")
             exit(1)
 
 
