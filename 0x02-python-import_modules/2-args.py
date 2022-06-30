@@ -9,7 +9,7 @@ def main():
         print(f"{n} arguments.")
         return
     else:
-        print(f"{n} arguments:")
+        print(f"{n} argument:")
     ind = 1
     for arg in range(n):
         print(f"{ind}: {sys.argv[ind]}")
