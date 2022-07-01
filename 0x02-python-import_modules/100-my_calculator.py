@@ -5,7 +5,7 @@ def main():
     nargs = len(sys.argv) - 1
     if nargs != 3:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
-        exit(1)
+        sys.exit(1)
     else:
         a = int(sys.argv[1])
         b = int(sys.argv[3])
@@ -19,7 +19,7 @@ def main():
             print(f"{a} {sys.argv[2]} {b} = {calc.mul(a, b)}") 
         else:
             print("Unknown operator. Available operators: +, -, * and /")
-            exit(1)
+            sys.exit(1)
 
 
 if __name__ == "__main__":
