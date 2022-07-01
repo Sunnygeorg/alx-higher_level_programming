@@ -5,8 +5,9 @@ def main():
     for arg in sys.argv:
         if arg != sys.argv[0]:
             res += int(arg)
-        print(res)
+    print(res)
 
 
 if __name__ == "__main__":
     main()
+
