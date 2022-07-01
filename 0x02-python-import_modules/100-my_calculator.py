@@ -2,7 +2,8 @@
 def main():
     import sys
     import calculator_1 as calc
-    if len(sys.argv) != 4:
+    nargs = len(sys.argv) - 1
+    if nargs != 3:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
     else:
