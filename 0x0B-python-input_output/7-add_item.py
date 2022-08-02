@@ -1,24 +1,22 @@
 #!/usr/bin/python3
-"""
-script appends items to a list in
-the add_item.json file
+"""Contains the load_from_json_file function
 """
 
 
-if __name__ == "__main__":
-    save = __import__("5-save_to_json_file").save_to_json_file
-    load = __import__("6-load_from_json_file").load_from_json_file
-    from sys import argv
+from sys import argv
+save_to_json_file = __import__("5-save_to_json_file").save_to_json_file
+load_from_json_file = __import__("6-load_from_json_file").load_from_json_file
 
-    try:
-        obj = load("add_item.json")
 
-    except FileNotFoundError:
-        obj = []
-        save(obj, "add_item.json")
-    i = 1
+filename = "add_item.json"
 
-    while i < len(argv):
-        obj.append(argv[i])
-        i += 1
-    save(obj, "add_item.json")
+try:
+    python_list = load_from_json_file(filename)
+except FileNotFoundError:
+    python_list = []
+
+for arg in argv:
+    if arg != argv[0]:
+        python_list.append(arg)
+
+save_to_json_file(python_list, filename)
