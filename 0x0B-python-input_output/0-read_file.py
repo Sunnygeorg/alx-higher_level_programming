@@ -6,10 +6,8 @@ Contains definition of a function that reads a text file
 
 
 def read_file(filename=""):
-    """Definition of a function that reads a text file
-        Args:
-            filename="" which defines the filename.
-    """
-    with open('UTF8', encoding='utf-8') as filename:
-        """Opens file UTF8"""
-        filename.read()
+    """Definition of a function that reads a text file"""
+    if filename:
+        with open(filename, "r", encoding="utf-8") as f:
+            text = f.read()
+            print(text, end="")
