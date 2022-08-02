@@ -11,5 +11,5 @@ def read_file(filename=""):
             filename="" which defines the filename.
     """
     with open('UTF8', encoding='utf-8') as filename:
-        fileread = filename.read()
-        print(fileread)
+        """Opens file UTF8"""
+        filename.read()
