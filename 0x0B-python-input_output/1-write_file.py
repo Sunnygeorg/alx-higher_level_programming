@@ -5,8 +5,5 @@
 
 def write_file(filename="", text=""):
     """Function definition"""
-
-    if filename:
-        with open(filename, "w", encoding="utf-8") as f:
-            text = f.write(type(str("")))
-            print(len(text), end="")
+    with open(filename, "w", encoding="utf-8") as f:
+        return (f.write(text))
